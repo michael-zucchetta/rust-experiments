@@ -1,0 +1,6 @@
+[package]
+name = "guessing_name"
+version = "0.1.0"
+authors = ["michael-zucchetta <michael.zucchetta@gmail.com>"]
+
+[dependencies]
