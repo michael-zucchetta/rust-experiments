@@ -1,0 +1,6 @@
+[package]
+name = "first_function"
+version = "0.1.0"
+authors = ["Michael Zucchetta <michael.zucchetta@gmail.com>"]
+
+[dependencies]
