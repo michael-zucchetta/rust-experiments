@@ -18,5 +18,27 @@ fn main() {
     let b: u32 = 32;
     let a: f32 = 32.0;
 
-    // panic!("break everything");
+    let y = if b == 32 { 1000 } else { -1 };
+    println!("print y {}", y);
+    let mut myArray: Vec<u32> = vec![3,5,6];
+
+    // doesn't work on normal arrays
+    for mut el in myArray {
+        el = 2;
+        // el is usize
+        println!("el {}", el);
+    }
+   
+    // print_vec(myArray);
+
+    // match myArray.get(3) {
+    //    Some(x) => println!("any different than an if? {}", x),
+    //    None => println!("weird syntax"),
+    //}
+}
+
+fn print_vec(printArray: Vec<u32>) {
+    for mut el in printArray {
+        println!("element {}", el);
+    }
 }
