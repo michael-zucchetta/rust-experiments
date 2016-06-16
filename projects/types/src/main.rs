@@ -20,16 +20,24 @@ fn main() {
 
     let y = if b == 32 { 1000 } else { -1 };
     println!("print y {}", y);
-    let mut myArray: Vec<u32> = vec![3,5,6];
+    let mut myArray: Vec<i32> = vec![3,5,6];
 
     // doesn't work on normal arrays
-    for mut el in myArray {
-        el = 2;
+    for el in &mut myArray {
+        // can do it since it's mutable reference
+        // doesn't work if print_vec is ahead (claiming ownership)
+        // myArray[0] += 1;
+        // el = 2;
+
+        // this work though
+        *el = 2;
         // el is usize
         println!("el {}", el);
     }
-   
-    // print_vec(myArray);
+  
+    // passing reference, doesn't claim ownership
+    print_vec(&myArray);
+    print_vec(&myArray);
 
     // match myArray.get(3) {
     //    Some(x) => println!("any different than an if? {}", x),
@@ -37,7 +45,7 @@ fn main() {
     //}
 }
 
-fn print_vec(printArray: Vec<u32>) {
+fn print_vec(printArray: &Vec<i32>) {
     for mut el in printArray {
         println!("element {}", el);
     }
