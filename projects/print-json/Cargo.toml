@@ -1,0 +1,6 @@
+[package]
+name = "print-json"
+version = "0.1.0"
+authors = ["Michael Zucchetta <mzucchetta@gilt.com>"]
+
+[dependencies]

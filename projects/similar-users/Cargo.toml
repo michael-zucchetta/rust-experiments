@@ -1,0 +1,8 @@
+[package]
+name = "similar-users"
+version = "0.1.0"
+authors = ["Michael Zucchetta <michael.zucchetta@gilt.com>"]
+
+[dependencies]
+rustc-serialize = "0.3"
+
