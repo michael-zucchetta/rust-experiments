@@ -1,5 +1,7 @@
 extern crate iron;
 
+mod utils;
+
 use iron::prelude::*;
 use iron::status;
 
@@ -27,5 +29,5 @@ fn main() {
     let value_string = "something".to_string();
     let x = do_something(&value_string);
     // x prints as () as the value Foo does not implement the Display trait and :? allows it
-    println!("On 3000 {} {:?}", ciao(), x);
+    println!("On 3000 {} {:?}", ciao() + utils::utils::test(3), x);
 }
